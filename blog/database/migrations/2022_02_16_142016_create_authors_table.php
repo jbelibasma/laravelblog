@@ -13,8 +13,9 @@ class CreateAuthorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('authors_', function (Blueprint $table) {
+        Schema::create('authors', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('author');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreateAuthorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('authors_');
+        Schema::dropIfExists('authors');
     }
 }

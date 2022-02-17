@@ -2,12 +2,11 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Category;
+use App\Author;
 use Faker\Generator as Faker;
 
-$factory->define(Category::class, function (Faker $faker) {
+$factory->define(Author::class, function (Faker $faker) {
     return [
-        'category'=>$faker->sentence,
-
+        'author'=>$faker->name,
     ];
 });
